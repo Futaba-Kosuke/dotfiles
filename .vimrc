@@ -25,6 +25,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle 'Shougo/neocomplete'
+NeoBundle 'Shougo/deoplete.nvim'
+NeoBundle 'roxma/nvim-yarp'
+NeoBundle 'roxma/vim-hug-neovim-rpc'
+
+NeoBundle 'deoplete-plugins/deoplete-jedi'
 
 call neobundle#end()
 
@@ -45,6 +50,8 @@ set whichwrap=b,s,h,l,<,>,[,]
 set backspace=indent,eol,start
 
 map <C-w> :NERDTreeToggle<CR>
+
+let g:deoplete#enable_at_startup = 1
 
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
@@ -178,3 +185,9 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+set completeopt=menuone,noinsert
+inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
+inoremap <expr><C-n> pumvisible() ? "<Down>" : "<C-n>"
+inoremap <expr><C-p> pumvisible() ? "<Up>" : "<C-p>"
+

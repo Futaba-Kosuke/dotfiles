@@ -84,6 +84,7 @@ alias pip='pip3'
 
 alias port_50000='lsof -i:50000'
 alias g++='g++ -std=c++14'
+alias pythonx='/usr/local/opt/python@3.8/bin/python3'
 
 export KAGGLE="$HOME/program/study/kaggle/"
 
