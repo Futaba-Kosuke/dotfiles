@@ -3,11 +3,11 @@ export LANG=ja_JP.UTF-8
 
 # パス
 export PATH="/bin:$PATH"
-export PATH="/Users/futaba/.nodebrew/current/bin:$PATH"
-export PATH="/Users/futaba/.pyenv/shims/:$PATH"
-# export PATH="/Users/futaba/Library/Python/3.7/bin:$PATH"
-# export PATH="/Users/futaba/Library/Python/3.7/lib/python/site-packages:$PATH"
-export PATH="/Users/futaba/.pyenv/versions/3.7.1/bin:$PATH"
+export PATH="/Users/$USER/.nodebrew/current/bin:$PATH"
+export PATH="/Users/$USER/.pyenv/shims/:$PATH"
+# export PATH="/Users/$USER/Library/Python/3.7/bin:$PATH"
+# export PATH="/Users/$USER/Library/Python/3.7/lib/python/site-packages:$PATH"
+export PATH="/Users/$USER/.pyenv/versions/3.7.1/bin:$PATH"
 
 # 色を使用
 autoload -Uz colors
@@ -83,6 +83,7 @@ alias c='clear'
 alias pip='pip3'
 
 alias port_50000='lsof -i:50000'
+alias g++='g++ -std=c++14'
 
 export KAGGLE="$HOME/program/study/kaggle/"
 
