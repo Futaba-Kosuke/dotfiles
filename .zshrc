@@ -8,6 +8,9 @@ export PATH="/Users/$USER/.pyenv/shims/:$PATH"
 # export PATH="/Users/$USER/Library/Python/3.7/bin:$PATH"
 # export PATH="/Users/$USER/Library/Python/3.7/lib/python/site-packages:$PATH"
 export PATH="/Users/$USER/.pyenv/versions/3.7.1/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+
+export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"
 
 # 色を使用
 autoload -Uz colors
@@ -76,7 +79,8 @@ alias gl='git log --graph'
 alias gcom='git commit'
 alias gc='git checkout'
 alias gb='git branch'
-alias gp='git pull'
+alias gd='git diff'
+alias gdc='git diff --cached'
 
 alias c='clear'
 
