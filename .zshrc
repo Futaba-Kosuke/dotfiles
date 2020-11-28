@@ -2,12 +2,10 @@
 export LANG=ja_JP.UTF-8
 
 # パス
+export PYENV_ROOT="$HOME/.pyenv"
 export PATH="/bin:$PATH"
 export PATH="/Users/$USER/.nodebrew/current/bin:$PATH"
-export PATH="/Users/$USER/.pyenv/shims/:$PATH"
-# export PATH="/Users/$USER/Library/Python/3.7/bin:$PATH"
-# export PATH="/Users/$USER/Library/Python/3.7/lib/python/site-packages:$PATH"
-export PATH="/Users/$USER/.pyenv/versions/3.7.1/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
 export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"
@@ -18,7 +16,6 @@ colors
 
 # 補完
 autoload -Uz compinit
-compinit
 
 # 他のターミナルとヒストリーを共有
 setopt share_history
@@ -96,3 +93,8 @@ eval "$(pyenv init -)"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 
 eval "$(starship init zsh)"
+
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+autoload -U compinit
+compinit -u
