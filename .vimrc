@@ -39,9 +39,15 @@ NeoBundle 'carlitux/deoplete-ternjs', { 'build': { 'mac': 'npm install -g tern',
 " C
 " NeoBundle 'zchee/deoplete-clang'
 " NeoBundle 'Shougo/deoplete-clangx'
+" Go
+NeoBundle 'fatih/vim-go'
+NeoBundle 'deoplete-plugins/deoplete-go', {'build': {'unix': 'make'}}
 
 " markdown
 NeoBundle 'skanehira/preview-markdown.vim'
+
+" load editor_config
+NeoBundle 'editorconfig/editorconfig-vim'
 
 call neobundle#end()
 
@@ -66,6 +72,10 @@ map <C-w> :NERDTreeToggle<CR>
 " deoplete settings
 " let g:deoplete#sources#clang#libclang_path='/Library/Developer/CommandLineTools/usr/lib/libclang.dylib'
 " let g:deoplete#sources#clang#clang_header='/Library/Developer/CommandLineTools/usr/lib/clang'
+
+let g:deoplete#sources#go#gocode_binary = '/usr/local/bin/go'
+let g:deoplete#sources#go#package_dot = 1
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
 
 let g:deoplete#enable_at_startup = 1
 
