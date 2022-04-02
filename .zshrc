@@ -7,6 +7,8 @@ export PATH="/bin:$PATH"
 export PATH="/Users/$USER/.nodebrew/current/bin:$PATH"
 export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
 
 export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"
 
@@ -59,6 +61,12 @@ alias ls='ls -FG'
 alias la='ls -FGa'
 alias l='ls -FG'
 alias ll='ls -lG'
+# exa環境下
+# alias ls='exa --icons'
+# alias l='ls'
+# alias la='ls -a'
+# alias ll='ls -l'
+# alias tree='ls -T'
 
 alias so='source'
 alias ..='cd ..'
