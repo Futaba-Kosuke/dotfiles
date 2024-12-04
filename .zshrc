@@ -2,12 +2,14 @@
 export LANG=ja_JP.UTF-8
 
 # パス
-export PYENV_ROOT="$HOME/.pyenv"
 export PATH="/bin:$PATH"
 export PATH="/Users/$USER/.nodebrew/current/bin:$PATH"
-export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.anyenv/bin:$PATH"
+export PATH="$HOME/.deta/bin:$PATH"
+export PATH="$HOME/.detaspace/bin:$PATH"
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
 eval "$(anyenv init -)"
 
 export LD_LIBRARY_PATH="/Library/Developer/CommandLineTools/usr/lib/:$LD_LIBRARY_PATH"
@@ -89,15 +91,12 @@ alias gdc='git diff --cached'
 
 alias c='clear'
 
-alias pip='pip3'
-
 alias port_50000='lsof -i:50000'
 alias g++='g++ -std=c++14'
 alias pythonx='/usr/local/opt/python@3.8/bin/python3'
 
 export KAGGLE="$HOME/program/study/kaggle/"
 
-eval "$(pyenv init -)"
 export PATH="/usr/local/opt/tcl-tk/bin:$PATH"
 
 eval "$(starship init zsh)"
@@ -106,3 +105,14 @@ fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
 autoload -U compinit
 compinit -u
+export PATH="/usr/local/opt/python@3.10/bin:$PATH"
+
+export PATH="/Users/futaba/.deta/bin:$PATH"
+
+export PATH="/Users/futaba/.deta/bin:$PATH"
+
+export PATH="/Users/futaba/.detaspace/bin:$PATH"
+
+export PATH="/Users/futaba/.detaspace/bin:$PATH"
+
+export PATH="/Users/futaba/.detaspace/bin:$PATH"

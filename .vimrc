@@ -80,7 +80,7 @@ set backspace=indent,eol,start
 map <C-w> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
-let g:python3_host_prog = '/Users/$USER/.anyenv/envs/pyenv/shims/python'
+let g:python3_host_prog = "/Users/futaba/.anyenv/envs/pyenv/shims/python"
 
 " lexima with depplete setting
 let g:lexima_no_default_rules = 1
